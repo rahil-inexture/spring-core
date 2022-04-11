@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<context:component-scan
+		base-package="com.spring.di"></context:component-scan>
+
+	<bean id="homeAddress"
+		class="com.spring.di.model.CurrentAddress">
+		<constructor-arg index="0" value="Adhmedabad"
+			type="java.lang.String" />
+		<constructor-arg index="1" value="Gujarat"
+			type="java.lang.String" />
+		<constructor-arg index="2" value="A-105 sai home"
+			type="java.lang.String" />
+		<constructor-arg index="3" value="360123" type="int" />
+	</bean>
+
+	<bean id="officeAddress"
+		class="com.spring.di.model.CurrentAddress">
+		<constructor-arg index="0" value="pune"
+			type="java.lang.String" />
+		<constructor-arg index="1" value="Mumbai"
+			type="java.lang.String" />
+		<constructor-arg index="2"
+			value="The Capital park" type="java.lang.String" />
+		<constructor-arg index="3" value="45603"
+			type="int" />
+	</bean>
+	
+	<bean id="department"
+		class="com.spring.di.model.Department">
+		<constructor-arg
+			value="Software Department" type="java.lang.String" />
+	</bean>
+	
+	<bean id="employee1"
+		class="com.spring.di.model.Employee">
+		<property name="empId" value="101" />
+		<property name="empName" value="Ram Prashad" />
+		<constructor-arg>
+			<list>
+				<ref bean="homeAddress" />
+				<ref bean="officeAddress" />
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Bike</value>
+				<value>Car</value>
+				<value>Scooty</value>
+				<value>Bicycle</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Technical" value="Everage Exceptation" />
+				<entry key="Communication" value="Average" />
+				<entry key="Leadership" value="Extra Ordinary" />
+			</map>
+		</constructor-arg>
+		<property name="department" ref="department" />
+	</bean>
+</beans>

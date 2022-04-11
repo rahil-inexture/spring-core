@@ -1,0 +1,10 @@
+2022-04-11 10:08:19 INFO  XmlApplication:24 - ----------------------- Employee Details  -----------------------
+2022-04-11 10:08:19 INFO  XmlApplication:25 - 	Employee ID :101
+2022-04-11 10:08:19 INFO  XmlApplication:26 - 	Employee Name :Ram Prashad
+2022-04-11 10:08:19 INFO  XmlApplication:27 - 	Employee Department :Software Department
+2022-04-11 10:08:19 INFO  XmlApplication:28 - 	Employee Address :[[city=Adhmedabad, State=Gujarat, house=A-105 sai home, pinCode=360123]
+	, [city=pune, State=Mumbai, house=The Capital park, pinCode=45603]
+	]
+2022-04-11 10:08:19 INFO  XmlApplication:29 - 	Employee Perfomance : Software Department
+2022-04-11 10:08:19 INFO  XmlApplication:30 - 	Employee Vehicle Collection :BICYCLE, BIKE, CAR, SCOOTY
+2022-04-11 10:08:19 INFO  XmlApplication:31 - -----------------------// END  -----------------------
