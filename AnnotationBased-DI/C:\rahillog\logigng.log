@@ -1,0 +1,15 @@
+2022-04-11 13:47:12 INFO  DepartmentImpl:23 - initializing Department Bean
+2022-04-11 13:47:12 INFO  DepartmentImpl:13 - Software Department
+2022-04-11 13:47:12 INFO  DepartmentImpl:18 - Department Bean Destroy
+2022-04-11 13:52:14 INFO  DepartmentImpl:23 - initializing Employee Bean
+2022-04-11 13:52:14 INFO  DepartmentImpl:23 - initializing Department Bean
+2022-04-11 13:52:14 INFO  DepartmentImpl:13 - Inside viewEmpInfo() method.
+2022-04-11 13:52:14 INFO  DepartmentImpl:13 - Software Department
+2022-04-11 13:52:14 INFO  DepartmentImpl:18 - Department Bean Destroy
+2022-04-11 13:52:14 INFO  DepartmentImpl:18 - Employee Bean Destroy
+2022-04-11 16:24:44 INFO  DepartmentImpl:23 - initializing Employee Bean
+2022-04-11 16:24:44 INFO  DepartmentImpl:23 - initializing Department Bean
+2022-04-11 16:24:44 INFO  DepartmentImpl:13 - Inside viewEmpInfo() method.
+2022-04-11 16:24:44 INFO  DepartmentImpl:13 - Software Department
+2022-04-11 16:24:44 INFO  DepartmentImpl:18 - Department Bean Destroy
+2022-04-11 16:24:44 INFO  DepartmentImpl:18 - Employee Bean Destroy
