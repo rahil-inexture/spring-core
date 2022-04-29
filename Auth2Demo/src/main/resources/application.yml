@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    password: Rahil@123
+    url: jdbc:mysql://localhost:3306/testDB
+    username: rahil
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: 445572474547-bchor421ci3q2rgr1d482t59n43t73ni.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - profile
