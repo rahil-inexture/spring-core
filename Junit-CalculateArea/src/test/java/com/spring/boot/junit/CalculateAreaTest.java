@@ -1,5 +1,8 @@
 package com.spring.boot.junit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,8 +21,7 @@ public class CalculateAreaTest {
 	CircleService circleService;
 	
 	CalculateArea calculateArea;
-	
-	
+		
 	@Before
 	public void init() {
 		rectangleService = Mockito.mock(RectangleService.class);
@@ -31,7 +33,7 @@ public class CalculateAreaTest {
 	
 	@SuppressWarnings("deprecation")
 	@Test
-	public void calculateRectangeAreaTest() {
+	public void calculateRectangeAreaTest(){
 		Mockito.when(rectangleService.area(5.0d, 4.0d)).thenReturn(20d);
 		Double calculateArea = this.calculateArea.calculateArea(Type.RECTANGLE, 5.0d, 4.0d);
 		Assert.assertEquals(new Double(20d), calculateArea);
@@ -51,5 +53,41 @@ public class CalculateAreaTest {
 		Mockito.when(circleService.area(5.0d)).thenReturn(78.53981634d);
 		Double calculateArea = this.calculateArea.calculateArea(Type.CIRCLE, 5.0d);
 		Assert.assertEquals(new Double(78.53981634d), calculateArea);
+	}
+	
+	@Test
+	public void testRectangleOneParameter() {
+		Throwable exception = assertThrows(RuntimeException.class, ()->{
+				this.calculateArea.calculateArea(Type.RECTANGLE, 5.0d);
+			}
+		);
+		assertEquals("Missing rectangle params", exception.getMessage());
+	}
+	
+	@Test
+	public void testSquareZeroParameter() {
+		Throwable exception = assertThrows(RuntimeException.class, ()->{
+				this.calculateArea.calculateArea(Type.SQUARE, 5.0d, 4.0d);
+			}
+		);
+		assertEquals("Missing square params", exception.getMessage());
+	}
+	
+	@Test
+	public void testCircleZeroParameter() {
+		Throwable exception = assertThrows(RuntimeException.class, ()->{
+				this.calculateArea.calculateArea(Type.CIRCLE, 5.0d, 4.0d);
+			}
+		);
+		assertEquals("Missing circle params", exception.getMessage());
+	}
+	
+	@Test
+	public void testSwitchCaseDefaultException() {
+		Throwable exception = assertThrows(RuntimeException.class, ()->{
+				this.calculateArea.calculateArea(Type.DUMY, 5.0d, 4.0d);
+			}
+		);
+		assertEquals("Operation Not Support", exception.getMessage());
 	}
 }

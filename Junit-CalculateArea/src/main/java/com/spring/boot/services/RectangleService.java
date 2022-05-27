@@ -7,6 +7,7 @@ public class RectangleService {
 	
 	public Double area(double r, double h) {
 		log();
+		System.out.println("RectangleService :"+ r * h);
 		return r * h;
 	}
 

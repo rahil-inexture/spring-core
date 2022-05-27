@@ -24,19 +24,19 @@ public class CalculateArea {
 			if(r.length >= 2)
 				return rectangleService.area(r[0], r[1]);
 			else
-				throw new RuntimeException("Missing required params");
+				throw new RuntimeException("Missing rectangle params");
 			
 		case SQUARE:
-			if(r.length >= 1)
+			if(r.length == 1)
 				return squareService.area(r[0]);
 			else
-				throw new RuntimeException("Missing required params");
+				throw new RuntimeException("Missing square params");
 			
 		case CIRCLE:
-			if(r.length >= 1)
+			if(r.length == 1)
 				return circleService.area(r[0]);
 			else
-				throw new RuntimeException("Missing required params");
+				throw new RuntimeException("Missing circle params");
 		default:
 			throw new RuntimeException("Operation Not Support");
 		}
