@@ -1,8 +1,8 @@
 spring:
   datasource:
-    password: Rahil@123
-    url: jdbc:mysql://localhost:3306/testDB
-    username: rahil
+    password: R@h!l$410
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
   jpa:
     hibernate:
       ddl-auto: create
